@@ -1,152 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
   <style>
-  *{
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans",sans-serif;
+ body
+{
+margin: 0;
+padding: 0;
+background:#00020F;
+font-family: sans-serif;
 }
-
-.team-section{
-    height: 100vh;
-    display: flex;
+a{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+color:#1670f0;
+padding:30px;
+letter-spacing:2px;
+text-transform:uppercase;
+text-decoration:none;
+box-shadow:0 20px 50px rgba(0,0,0,.5);
+overflow:hidden;
 }
-
-.person{
-    flex: 1;
-    overflow: hidden;
-    cursor: pointer;
-    position: relative;
-    transition: .6s;
+a:before
+{
+content: '';
+position: absolute;
+top: 2px;
+left: 2px;
+bottom: 2px;
+width: 50%;
+background: rgba(255,255,255,0.05);
 }
-
-.person:hover{
-    flex: 3;
+a span:nth-child(1)
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 2px;
+background: linear-gradient(to right,#0c002b,#1779ff);
+animation: animate1 2s linear infinite;
 }
-
-.person-pic{
-    position: absolute;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    filter: grayscale(80%);
-    transition: .3s;
+@keyframes animate1
+{
+ 0%
+ {
+   transform:translateX(-100%);
+ 
+ }
+ 100%
+ {
+   transform:translateX(100%);
+ 
+ }
 }
-
-.person:hover .person-pic{
-    filter: grayscale(0);
+a span:nth-child(2)
+{
+position: absolute;
+top: 0;
+right: 0;
+width: 2px;
+height: 100%;
+background: linear-gradient(to bottom,#0c002b,#1779ff);
+animation: animate2 2s linear infinite;
+animation-delay: 1s;
 }
-
-.person-info{
-    position: absolute;
-    bottom: 10px;
-    text-align: center;
-    width: 100%;
-    opacity: 0;
-    transition: .2s;
+@keyframes animate2 
+{
+ 0%
+ {
+   transform:translateY(-100%);
+ 
+ }
+ 100%
+ {
+   transform:translateY(100%);
+ 
+ }
 }
-
-.person:hover .person-info{
-    opacity: 1;
-    bottom: 60px;
-    transition-delay: .6s;
+a span:nth-child(3)
+{
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 2px;
+background: linear-gradient(to left,#0c002b,#1779ff);
+animation: animate3 2s linear infinite;
 }
-
-.person-info h2{
-    font-size: 20px;
-    color: #fff;
+@keyframes animate3
+{
+ 0%
+ {
+   transform:translateX(100%);
+ 
+ }
+ 100%
+ {
+   transform:translateX(-100%);
+ 
+ }
 }
-
-.person-info p{
-    color: #b8e994;
-    font-style: italic;
-    margin-top: 8px;
-    margin-bottom: 20px;
+a span:nth-child(4)
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 2px;
+height: 100%;
+background: linear-gradient(to top,#0c002b,#1779ff);
+animation: animate4 2s linear infinite;
+animation-delay: 1s;
 }
-
-.socialmedia a{
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    color: #333;
-    background-color: #b8e994;
-    line-height: 40px;
-    border-radius: 50%;
-    margin: 0 6px;
-    font-size: 18px;
-    transition: .3s linear;
+@keyframes animate4 
+{
+ 0%
+ {
+   transform:translateY(100%);
+ 
+ }
+ 100%
+ {
+   transform:translateY(-100%);
+ 
+ }
 }
-
-.socialmedia a:hover{
-    color: #b8e994;
-    background-color: transparent;
-    transform: scale(1.5);
-}
-  </style>
-</head>
-<body>
-    <div class="team-section">
-        <div class="person">
-            <img src="https://drive.google.com/uc?export=view&id=1yuB3yFA9cqy0a_eoEFTzjWnf6AlRYHN7" alt="" class="person-pic">
-            <div class="person-info">
-                <h2>Sadman Fardin</h2>
-                <p>Data scientist</p>
-                <div class="socialmedia">
-                    <a href="https://www.facebook.com/profile.php?id=100005420179078"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="person">
-            <img src="https://drive.google.com/uc?export=view&id=1GNrD6lHKHJ_MjHPIVB4skmp-CRSeE82K" alt="" class="person-pic">
-            <div class="person-info">
-                <h2>Mohon Dash Tanu</h2>
-                <p>Full-stack developer</p>
-                <div class="socialmedia">
-                    <a href="https://www.facebook.com/tanu.das.7359"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="person">
-            <img src="https://drive.google.com/uc?export=view&id=1o2p1IDL9K1QHtcL3askTpmbEaqJrnqU_" alt="" class="person-pic">
-            <div class="person-info">
-                <h2>Sifat Sahariar</h2>
-                <p>App developer</p>
-                <div class="socialmedia">
-                    <a href="https://www.facebook.com/sunny.sifat.7"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="person">
-            <img src="https://drive.google.com/uc?export=view&id=15zrdHtZveahqiiDuFhcov__G8kwEhjge" alt="" class="person-pic">
-            <div class="person-info">
-                <h2>Showmen Sarker</h2>
-                <p>Network Technician</p>
-                <div class="socialmedia">
-                    <a href="https://www.facebook.com/nosshormanus"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+ </style>
+  </head>
+  <body>
+   
+<a href="https://www.facebook.com/">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  The BroCode
+  </a>
+  </body>
+</html>a
